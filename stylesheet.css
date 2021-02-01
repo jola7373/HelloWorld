@@ -10,7 +10,7 @@ html, body, div, h1, h2, a, form, table, caption, thead, tbody, tr, th, td, subm
 	margin:0; outline:0; border:0; padding:0; font-size:100%; vertical-align:baseline; background:burlywood;
 }
 body { 
-	font-size:0.875em; line-height:1.5; color:burlywood; -webkit-text-size-adjust:none; min-width:320px;
+	font-size:0.875em; line-height:1.5; color:rgb(148, 104, 46); -webkit-text-size-adjust:none; min-width:320px;
 	font-family:'NanumGothic','나눔고딕',dotum, "Helvetica Neue", Helvetica, Verdana, Arial, Sans-Serief;
 }
 h1, h2, h3 {font-size: 1.5em;}
@@ -122,4 +122,9 @@ nav ul ul li a span{
 }
 nav ul .feat-show.show{
 	display:block;
+}
+
+/* bootstrap button */
+.dropdown-menu{
+	width:70%
 }

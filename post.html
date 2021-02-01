@@ -6,12 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- stylesheet -->
-    <link href="stylesheet.css" rel="stylesheet">
+    <link href="/stylesheet.css" rel="stylesheet">
 
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Nanum+Gothic+Coding&family=Nanum+Myeongjo&family=Nanum+Pen+Script&display=swap" rel="stylesheet">
 
     <!-- Font Awesome && Jquery-->
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
@@ -31,7 +34,7 @@
     -->
     <div class = "whole-page">
       <nav class="iconbar">
-          <div class="dropdown">
+          <!-- <div class="dropdown">
               <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
                 글씨체
               </button>
@@ -47,6 +50,17 @@
               </ul>
 
 
+            </div> -->
+            <div class="dropdown">
+              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" >
+                글씨체
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <li><button class="dropdown-item" onclick="letterChange(1)" style="font-family:'Nanum Myeongjo', serif ">나눔명조</button></li>
+                <li><button class="dropdown-item" onclick="letterChange(2)" style="font-family:'Black Han Sans', sans-serif ">나눔바른고딕</button></li>
+                <li><button class="dropdown-item" onclick="letterChange(3)" style="font-family:'Nanum Pen Script', cursive">마루부리</button></li>
+              </ul>
+              <button type="button" class="btn btn-primary btn-sm" onclick="letterStrong()">Small button</button>
             </div>
       </nav>
       <div class="container">
@@ -86,6 +100,27 @@
           $('nav ul .feat-show').toggleClass("show");
         });
       </script>
+      <script>
+        var z=100;
+        function letterChange(i){
+          var x = document.getElementById("contents");
+          if (i==1){
+            x.style.fontFamily= 'Nanum Myeongjo', serif;
+          }else if(i==2){
+            x.style.fontFamily= 'Black Han Sans', sans-serif;
+          }else if(i==3){
+            x.style.fontFamily= 'Nanum Pen Script', cursive;
+          }
+        }
+        function letterStrong(){
+          z+=100;
+          var y = document.getElementById("contents");
+          y.style.fontWeight= z;
+        }
+      </script>
+      
     </div>
+
   </body>
 </html>
+
